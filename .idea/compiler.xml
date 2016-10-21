@@ -25,7 +25,7 @@
         <module name="RedisClient" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.7">
       <module name="RedisClient" target="1.6" />
     </bytecodeTargetLevel>
   </component>
