@@ -5,7 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.listener.PatternTopic;
@@ -50,8 +49,10 @@ public class Application {
 
 
     public static void main(String[] args) throws InterruptedException{
+
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
         StringRedisTemplate template = ctx.getBean(StringRedisTemplate.class);
+
 
         CountDownLatch latch = ctx.getBean(CountDownLatch.class);
 
